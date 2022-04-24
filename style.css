@@ -1,0 +1,200 @@
+/* Font Awesome icon start */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+ :root {
+    /* ======= skin color ======= */
+    --skin-color-dark: #dc3545;
+    --skin-color-light: #e35d6a;
+    --skin-t: #dc354580;
+}
+
+
+/* ======= light theme ======= */
+
+body.light {
+    /*  skin color  */
+    --skin-1: var(--skin-color-dark);
+    --skin-2: var(--skin-color-light);
+    /*  Text-color   */
+    --text-1: #000000;
+    --text-2: #212529;
+    --text-3: #6c757d;
+    --text-4: #ffffff;
+    /*  background color   */
+    --bg-1: #ffffff;
+    --bg-2: #f8f9fa
+}
+
+
+/* ======= dark theme ======= */
+
+body.dark {
+    /*  skin color  */
+    --skin-1: var(--skin-color-light);
+    --skin-2: var(--skin-color-dark);
+    /*  Text-color   */
+    --text-2: #ffffff;
+    --text-3: #9c9c9c;
+    /*  background color   */
+    --bg-1: #343a40;
+    --bg-2: #212529;
+}
+
+body {
+    background-color: var(--bg-2);
+    color: var(--text-2);
+}
+
+body * {
+    transition: background-color 500ms ease;
+}
+
+section {
+    overflow: hidden;
+}
+
+.btn-danger {
+    background-color: var(--skin-1) !important;
+    border-color: var(--skin-1) !important;
+}
+
+.btn-outline-danger:hover .btn-danger:hover {
+    background-color: var(--skin-2) !important;
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem var(--skin-t) !important;
+}
+
+.btn-check:focus+.btn-danger,
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.25rem var(--skin-t);
+    background-color: var(--skin-1) !important;
+}
+
+.btn-outline-danger {
+    color: var(--skin-1) !important;
+    border-color: var(--skin-1) !important;
+}
+
+.btn-outline-danger:hover {
+    color: #fff !important;
+    background-color: var(--skin-1) !important;
+    border-color: var(--skin-1) !important;
+}
+
+.bg-light {
+    background-color: var(--bg-2) !important;
+}
+
+.bg-white {
+    background-color: var(--bg-1) !important;
+}
+
+.bg-danger {
+    background-color: var(--skin-1) !important;
+}
+
+.text-danger {
+    color: var(--skin-1) !important;
+}
+
+.text-muted {
+    color: var(--text-3)!important;
+}
+
+.text-dark {
+    color: var(--text-2)!important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: var(--bg-2) !important;
+}
+
+.thumbnail-img img {
+    border-radius: .25rem;
+}
+
+.img-thumbnail {
+    background-color: var(--bg-1);
+    border: 4px solid var(--bg-1);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+}
+
+
+/* sun icon */
+
+body.light .chengtheme::before {
+    content: "\f186";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color: var(--text-2);
+}
+
+.page-loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000000;
+    background: var(--bg-1);
+    align-items: center;
+}
+
+.page-loader.fade-out {
+    height: 0%;
+    width: 0%;
+}
+
+
+/* -------- scrollbar  -------- */
+
+
+/* width */
+
+ ::-webkit-scrollbar {
+    width: 5px;
+    background: var(--bg-2);
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--bg-1);
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--skin-1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: var(--skin-2);
+    transition: background-color 250ms ease-in-out;
+}
+
+
+/* moon icon  */
+
+body.dark .chengtheme::after {
+    content: "\f185";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color: var(--text-2);
+}

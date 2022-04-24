@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html class='ltr' dir='ltr' lang='en_gb' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+<head>
+    <meta charset='utf-8' />
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+    <!-- bootstrap CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet' />
+    <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />
+    <title> Template</title>
+    <!-- style for Theme and icon -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class='min-vh-100'>
+    <script>
+        /* ======================= Auto B/W theme Selection ================ */
+
+        /* Auto B/W theme Selection */
+
+        const theme = sessionStorage.getItem("theme");
+        if (theme == "dark") {
+            document.body.classList.add("dark");
+        } else if (theme == "light") {
+            document.body.classList.add("light");
+        } else {
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+            if (prefersDarkScheme.matches) {
+                document.body.classList.add("dark");
+            } else {
+                document.body.classList.add("light");
+            }
+        }
+
+        /* Manual B/W theme Selection */
+
+        function chengtheme() {
+            if (document.querySelector("body").classList.contains("dark")) {
+                document.body.classList.remove("dark");
+                document.body.classList.add("light");
+                sessionStorage.setItem("theme", "light");
+            } else {
+                document.body.classList.remove("light");
+                document.body.classList.add("dark");
+                sessionStorage.setItem("theme", "dark");
+            }
+        }
+    </script>
+
+    <div class=' page-loader d-flex justify-content-center'>
+        <div class='spinner-grow text-danger' role='status'>
+            <span class='visually-hidden'>Loading...</span>
+        </div>
+    </div>
+    <!-- navbar start -->
+    <nav class='navbar navbar-light bg-light shadow-sm fixed-top' data-aos='fade-down'>
+        <div class='container-fluid'>
+            <a class='navbar-brand text-danger fw-bold fs-4' href='https://template3-anascoding.blogspot.com/'>Template 3</a>
+            <div class='dropdown'>
+                <button aria-expanded='false' class='btn btn-secondary px-3 btn-danger' data-bs-toggle='dropdown' id='dropdownMenuButton1' type='button'>
+                    <i class='fas fa-align-right'></i>
+                </button>
+                <ul aria-labelledby='dropdownMenuButton1' class='dropdown-menu dropdown-menu-end bg-white'>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#home'>Home</a>
+                    </li>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#about'>About</a>
+                    </li>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#services'>Services</a>
+                    </li>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#portfolio'>Portfolio</a>
+                    </li>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#testimonials'>Testimonials</a>
+                    </li>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#subscribe'>subscribe</a>
+                    </li>
+                    <li>
+                        <a class='dropdown-item text-dark' href='#contact'>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- home section start -->
+    <section class='home py-5 position-relative' id='home'>
+        <button class='chengtheme btn position-absolute' onclick='chengtheme()' style='top: 70px; right: 15px;' title='theme'></button>
+        <div class='container-lg section' id='Home'>
+            <div class='widget Image row min-vh-100 align-items-center align-content-center' data-version='2' id='Image1'>
+                <div class='col-md-6 mt-5 mt-md-0' data-aos='fade-right'>
+                    <div class='home-img text-center'>
+                        <img alt='profile img' class='rounded-circle mw-100 bg-danger' src='https://lh3.googleusercontent.com/-nD1GWqdNKoU/YVBFzgQJInI/AAAAAAAAAd8/lrsipMzJp0UAkO4oinznj95BxFTPwHKRQCLcBGAsYHQ/s373/profile-removebg-preview.png' />
+                    </div>
+                </div>
+                <div class='col-md-6 order-md-first mt-5 mt-md-0' data-aos='fade-right'>
+                    <div class='home-text'>
+                        <p class='text-muted mb-1'>Hello I'm</p>
+                        <h1 class='text-danger text-uppercase fs-1'>
+                            Freelancer
+                        </h1>
+                        <h2 class='fs-4'>
+                            upvesh kumar
+                        </h2>
+                        <p class='mt-4 text-muted'>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil accusamus repudiandae consequuntur dolore fugit in!
+                        </p>
+                        <a class='btn btn-danger px-3 mt-3' href='#portfolio'>My Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home section end -->
+    <!-- about section start -->
+    <section class='about py-5' id='about'>
+        <div class='container-lg py-4'>
+            <div class='row justify-content-center'>
+                <div class='col-lg-8'>
+                    <div class='section-title text-center' data-aos='fade-up'>
+                        <h2 class='fw-bold mb-5'>About Me</h2>
+                    </div>
+                </div>
+            </div>
+            <div class='row about-section-row'>
+                <div class='col-md-6' data-aos='fade-up-right'>
+                    <div class='row section' id='About-Me'>
+                        <div class='widget Text' data-version='1' id='Text1'>
+                            <h3 class='fs-4 mb-3 text-danger'>
+                                Lorem ipsum
+                            </h3>
+                            <p class='text-muted'>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.
+                            </p>
+                        </div>
+                        <div class='widget LinkList' data-version='1' id='LinkList2'>
+                            <div class='row text-center text-uppercase my-3'>
+                                <div class='col-sm-4'>
+                                    <h4 class='fact-item'>
+                                        100
+                                    </h4>
+                                    <p class='text-muted'>
+                                        PROJECTS COMPLETED
+                                    </p>
+                                </div>
+                                <div class='col-sm-4'>
+                                    <h4 class='fact-item'>
+                                        90
+                                    </h4>
+                                    <p class='text-muted'>
+                                        HAPPY CLIENTS
+                                    </p>
+                                </div>
+                                <div class='col-sm-4'>
+                                    <h4 class='fact-item'>
+                                        95
+                                    </h4>
+                                    <p class='text-muted'>
+                                        POSITIVE REVIEWS
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='widget Text col-6 d-flex justify-content-center' data-version='1' id='Text2'>
+                            <a class='btn btn-danger px-5 py-2 ' href='https://www.goodcv.com/cv/71468f9ed5feba5dbd79042b8c8ba1cd' target='blank'>CV</a>
+                        </div>
+                        <div class='widget LinkList social-links icon hover col-6 d-flex align-items-center' data-version='2' id='LinkList5'>
+                            <a class='text-dark me-4' href='#'>
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a class='text-dark me-4' href='#'>
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a class='text-dark me-4' href='#'>
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a class='text-dark me-4' href='#'>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-6' data-aos='fade-up-left'>
+                    <div class='mt-5 mt-md-0 section' id='skils'>
+                        <div class='widget LinkList' data-version='1' id='LinkList3'>
+                            <h2 class='fs-4 mb-3 text-danger'>
+                                Skils
+                            </h2>
+                            <div class='skill-item mb-4'>
+                                <h3 class='fs-6'>
+                                    html
+                                </h3>
+                                <div class='progress bg-white ' style='height: 5px;'>
+                                    <div aria-valuemax='100' aria-valuemin='0' aria-valuenow='80' class='progress-bar bg-danger' role='progressbar' style=' width: 80%; '></div>
+                                </div>
+                            </div>
+                            <div class='skill-item mb-4'>
+                                <h3 class='fs-6'>
+                                    css
+                                </h3>
+                                <div class='progress bg-white ' style='height: 5px;'>
+                                    <div aria-valuemax='100' aria-valuemin='0' aria-valuenow='70' class='progress-bar bg-danger' role='progressbar' style=' width: 70%; '></div>
+                                </div>
+                            </div>
+                            <div class='skill-item mb-4'>
+                                <h3 class='fs-6'>
+                                    Javascript
+                                </h3>
+                                <div class='progress bg-white ' style='height: 5px;'>
+                                    <div aria-valuemax='100' aria-valuemin='0' aria-valuenow='50' class='progress-bar bg-danger' role='progressbar' style=' width: 50%; '></div>
+                                </div>
+                            </div>
+                            <div class='skill-item mb-4'>
+                                <h3 class='fs-6'>
+                                    Bootstrap
+                                </h3>
+                                <div class='progress bg-white ' style='height: 5px;'>
+                                    <div aria-valuemax='100' aria-valuemin='0' aria-valuenow='100' class='progress-bar bg-danger' role='progressbar' style=' width: 100%; '></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section end -->
+    <!-- services section start -->
+    <section class='services py-5' id='services'>
+        <div class='container-lg py-4'>
+            <div class='row justify-content-center mb-5'>
+                <div class='col-lg-8'>
+                    <div class='section-title text-center' data-aos='fade-up'>
+                        <h2 class='fw-bold mb5'>What I Do</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- services items -->
+            <div class='row text-center section' id='services'>
+                <div class='widget LinkList' data-version='2' id='LinkList4'>
+                    <div class='row text-center'>
+                        <div class='col-md-6 col-lg-4 mb-4' data-aos='flip-left'>
+                            <div class='service-item shadow-sm p-4 rounded bg-white'>
+                                <div class='icon my-3 text-danger fs-2'>
+                                    <i class="fa-solid fa-file-word"></i>
+                                </div>
+                                <h3 class='fs-5 py-2'>
+                                    MS Word
+                                </h3>
+                                <p class='text-muted '>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, assumenda.
+                                </p>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-4' data-aos='flip-left'>
+                            <div class='service-item shadow-sm p-4 rounded bg-white'>
+                                <div class='icon my-3 text-danger fs-2'>
+                                    <i class="fa-solid fa-compass-drafting"></i>
+                                </div>
+                                <h3 class='fs-5 py-2'>
+                                    Creative Design
+                                </h3>
+                                <p class='text-muted '>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, assumenda.
+                                </p>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-4' data-aos='flip-left'>
+                            <div class='service-item shadow-sm p-4 rounded bg-white'>
+                                <div class='icon my-3 text-danger fs-2'>
+                                    <i class="fa-solid fa-image"></i>
+                                </div>
+                                <h3 class='fs-5 py-2'>
+                                    Photoshop
+                                </h3>
+                                <p class='text-muted '>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, assumenda.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services section end -->
+    <!-- Portfolio section start -->
+    <section class='portfolio py-5' id='portfolio'>
+        <div class='container-lg py-4'>
+            <div class='row justify-content-center mb-5'>
+                <div class='col-lg-8'>
+                    <div class='section-title text-center' data-aos='fade-up'>
+                        <h2 class='fw-bold mb5'>
+                            Latest Project
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class='Label section' id='Label-Menu'>
+                <div class='widget Label d-flex flex-wrap justify-content-center m-5' data-version='2' id='Label1'>
+                    <a class='btn m-1 btn-danger' data-aos='zoom-in' href='#All'>All</a>
+                    <a class='btn  m-1 text-capitalize btn-outline-danger' data-aos='zoom-in' href='#test'>test</a>
+                    <a class='btn  m-1 text-capitalize btn-outline-danger' data-aos='zoom-in' href='#test1'>test1</a>
+                    <a class='btn  m-1 text-capitalize btn-outline-danger' data-aos='zoom-in' href='#test2'>test2</a>
+                </div>
+            </div>
+            <div class='main section' id='main'>
+                <div class='widget Blog' data-version='2' id='Blog1'>
+                    <div class='row'>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://lh3.googleusercontent.com/blogger_img_proxy/ABLy4Ex-kiv3K6OJdbsdyf17PLR-YDzoywzzZC7DYh3xBWkZZhjoQmZnGOhZ_uSUbGWZXoCQIlpQGgZiwufcr-r8yBfxTmfRvNfwMV0swm0bMBxn33MAJ-B4EoOhlUwrzBBJQxIm7ZxlTk8X25GkixxziMIOR9uzbhjozW2gFGHgyk5jgpt-B4WGeiupqdMrmg'
+                                    />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>this is test fore my project</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 26, 2021</p>
+                                    <span class='post-labels'><span class='entry-category'>test</span>
+                                    </span>
+                                    <p class='BodySnippet'>this is test fore my project</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://1.bp.blogspot.com/-IPCsNJdDe8g/YSnBXbgN1rI/AAAAAAAAAbw/Saje5YnqzJcukq63S7IWu73TxgxhDvmQACLcBGAsYHQ/s0/3.jpg' />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>Creative Team Section</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 24, 2021</p>
+                                    <span class='post-labels'><span class='entry-category'>test2</span>
+                                    </span>
+                                    <p class='BodySnippet'>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://1.bp.blogspot.com/-KehLv9pBmX4/YSnBYVaMJII/AAAAAAAAAcE/P-EjJpUganYmyOe8Y9lggLiekhC3_HsRACLcBGAsYHQ/s0/6.jpg' />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>Filterble Image Gallery</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 24, 2021</p>
+                                    <span class='post-labels'></span>
+                                    <p class='BodySnippet'>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://1.bp.blogspot.com/-u8uSJirJkvQ/YSnBYF-YZhI/AAAAAAAAAb8/_rSWj7vve0M1mwQEmDT5Z3PWhT5go4-kgCLcBGAsYHQ/s0/4.jpg' />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>Toggle Pricing Table</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 24, 2021</p>
+                                    <span class='post-labels'></span>
+                                    <p class='BodySnippet'>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://1.bp.blogspot.com/-3huD1KzAmUI/YSnBYeSnv-I/AAAAAAAAAcA/sWHm4gXdpUkH5x6y6uRHP_-1_M9iYQQAQCLcBGAsYHQ/s0/5.jpg' />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>Bootstrap 5 Image Gallery</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 24, 2021</p>
+                                    <span class='post-labels'></span>
+                                    <p class='BodySnippet'>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://1.bp.blogspot.com/-3OLhATKXTyg/YSnBXepCHDI/AAAAAAAAAb0/BoYgopDAxKIIGfquwVHCKwSDQwV3Z8whwCLcBGAsYHQ/w400-h225/2.jpg' />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>App Landing Page</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 24, 2021</p>
+                                    <span class='post-labels'></span>
+                                    <p class='BodySnippet'>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-6 col-lg-4 mb-5' data-aos='zoom-out' data-bs-dismiss='modal' data-bs-target='#ModalToggle' data-bs-toggle='modal' onclick='showImage(this);' style='cursor: pointer;'>
+                            <div class='portfolio-item'>
+                                <div class='thumbnail-img img-thumbnail'>
+                                    <img alt='portfolio' class='w-100' src='https://1.bp.blogspot.com/-sVAxOehxpSc/YSnBXV6vNeI/AAAAAAAAAcQ/5RqwKQ4WAnsZton6soyL_JQmjWLqMU0JwCPcBGAYYCw/w400-h225/1.jpg' />
+                                </div>
+                                <h3 class='text-capitalize fs-5 my-2 title text-capitalize'>Team Section</h3>
+                                <div class='d-none'>
+                                    <p class='postTime'>September 20, 2021</p>
+                                    <span class='post-labels'></span>
+                                    <p class='BodySnippet'>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.Lorem ipsum
+                                        dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adipisci rem, omnis, est tenetur, facilis consectetur aliquid earum aperiam quasi voluptas magni eligendi quia laborum illum modi soluta consequuntur.Lorem
+                                        ipsum dolor sit amet consectetur adipisicing elit. Obcaecati reiciendis adi&#8230;
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='d-flex justify-content-center' data-aos='zoom-out-up'>
+                <a class='btn btn-danger' href='#'>More Project</a>
+            </div>
+            <div aria-hidden='true' aria-labelledby='exampleModalToggleLabel' class='modal fade' data-aos='flip-up' id='ModalToggle' tabindex='-1'>
+                <div class='modal-dialog modal-xl'>
+                    <div class='modal-content bg-light'>
+                        <div class='modal-header'>
+                            <h5 class='modal-title title text-capitalize' id='exampleModalToggleLabel'></h5>
+                            <button aria-label='Close' class='btn-close text-dark' data-bs-dismiss='modal' type='button'></button>
+                        </div>
+                        <div class='modal-body'>
+                            <img alt='' class='img w-100 post-img' src='#' />
+                            <p class='post-date text-start text-muted'></p>
+                            <p class='post-p'></p>
+                        </div>
+                        <div class='modal-footer justify-content-between'>
+                            <a class='btn btn-danger previous-btn fas fa-chevron-left'></a>
+                            <div></div>
+                            <a class='btn btn-danger next-btn fas fa-chevron-right'></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let ImgThumbnail = document.getElementsByClassName("thumbnail-img")
+
+                for (let i = 0; i < ImgThumbnail.length; i++) {
+                    let Img = ImgThumbnail[i]
+                    let x = Img.clientWidth
+                    y = x / 1.783
+                    Img.style.height = y + "px";
+                }
+
+
+                const lightboxImage = document.querySelector(".modal-dialog .img");
+
+                const lightboxTitle = document.querySelector(".modal-dialog .title");
+
+                const lightboxDate = document.querySelector(".modal-dialog .post-date");
+
+                const lightboxP = document.querySelector(".modal-dialog .post-p");
+
+                const nextBtn = document.querySelector(".next-btn");
+
+                const previousBtn = document.querySelector(".previous-btn");
+
+                let currentImage = "";
+
+                const showImage = (data) => {
+                    currentImage = data;
+                    let image = data.querySelector("img");
+                    let title = data.querySelector(".title").innerText;
+                    let date = data.querySelector(".postTime").innerText;
+                    let BodySnippet = data.querySelector(".BodySnippet").innerText;
+
+                    lightboxImage.src = image.src;
+
+                    if (title) {
+                        lightboxTitle.innerText = title;
+                    }
+                    if (date) {
+                        lightboxDate.innerText = date;
+                    }
+                    if (BodySnippet) {
+                        lightboxP.innerText = BodySnippet;
+                    }
+
+                    if (!currentImage.previousElementSibling) {
+                        previousBtn.classList.add("d-none");
+                        previousBtn.classList.remove("inline-block");
+                    } else {
+                        previousBtn.classList.remove("d-none");
+                        previousBtn.classList.add("inline-block");
+                    }
+                    if (!currentImage.nextElementSibling) {
+                        nextBtn.classList.add("d-none");
+                        nextBtn.classList.remove("inline-block");
+                    } else {
+                        nextBtn.classList.remove("d-none");
+                        nextBtn.classList.add("inline-block");
+                    }
+                };
+
+                nextBtn.addEventListener("click", () => {
+                    if (currentImage.nextElementSibling) {
+                        currentImage = currentImage.nextElementSibling;
+                        showImage(currentImage);
+                    }
+                    console.log("next")
+                });
+
+                previousBtn.addEventListener("click", () => {
+                    if (currentImage.previousElementSibling) {
+                        currentImage = currentImage.previousElementSibling;
+                        showImage(currentImage);
+                    }
+                    console.log("back")
+                });
+            </script>
+        </div>
+    </section>
+    <!-- Portfolio section end -->
+    <!-- freelancer available section start -->
+    <section class='freelancer-available py-5 bg-danger'>
+        <div class='container-lg py-4' data-aos='flip-up'>
+            <div class='row justify-content-center section' id='freelancer'>
+                <div class='widget Text col-lg-8 text-center' data-version='1' id='Text3'>
+                    <p class='text-light fs-5'>
+                        Do you have any project ?
+                    </p>
+                    <h2 class='fs-1 text-white mb4'>
+                        I'm Available for freelancer Projects
+                    </h2>
+                    <a class='btn btn-outline-light' href='#contact'>Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- freelancer available section end -->
+    <!-- Testimonials section start -->
+    <section class='testimonials py-5' id='testimonials'>
+        <div class='container-lg py-4'>
+            <div class='row justify-content-center mb-5'>
+                <div class='col-lg-8'>
+                    <div class='section-title text-center' data-aos='fade-down'>
+                        <h2 class='fw-bold mb5'>Testimonials</h2>
+                    </div>
+                </div>
+            </div>
+            <div class='row  justify-content-center' data-aos='flip-down'>
+                <div class=' col-lg-8 col-xl-7'>
+                    <div class='carousel slide' data-bs-ride='carousel' id='carouselExampleIndicators'>
+                        <div class='carousel-indicators'>
+                            <button aria-current='true' aria-label='Slide 1' class='bg-danger active' data-bs-slide-to='0' data-bs-target='#carouselExampleIndicators' type='button'></button>
+                            <button aria-label='Slide 2' class='bg-danger' data-bs-slide-to='1' data-bs-target='#carouselExampleIndicators' type='button'></button>
+                            <button aria-label='Slide 3' class='bg-danger' data-bs-slide-to='2' data-bs-target='#carouselExampleIndicators' type='button'></button>
+                        </div>
+                        <div class='carousel-inner p-1 section' id='Testimonials'>
+                            <div class='widget Image testi-item carousel-item active bg-white shadow-sm rounded p-4 mb-5' data-version='2' id='Image2'>
+                                <div class='testi-author-info d-flex align-items-center'>
+                                    <img alt='Raj Himachal' class='img-thumbnail rounded-circle' src='https://1.bp.blogspot.com/-naoJGWqVXuE/YSnDDDbK5LI/AAAAAAAAAco/pWfBvXUTrqMCrNBeKSKjCOO6QGJ9ihsMQCLcBGAsYHQ/s70/2.jpg' />
+                                    <div class='author ms-3'>
+                                        <h3 class='fs-6 mb-1'>
+                                            Raj Himachal
+                                        </h3>
+                                        <p class='text-muted m-0'>
+                                            Seo Manager
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class='text-muted mt-3'>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quaerat, eos recusandae fugiat nesciunt sint accusantium repellendus officia perferendis ea.
+                                </p>
+                                <div class='rating text-danger'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                </div>
+                            </div>
+                            <div class='widget Image testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5' data-version='2' id='Image3'>
+                                <div class='testi-author-info d-flex align-items-center'>
+                                    <img alt='Raj Himachal' class='img-thumbnail rounded-circle' src='https://1.bp.blogspot.com/-naoJGWqVXuE/YSnDDDbK5LI/AAAAAAAAAco/pWfBvXUTrqMCrNBeKSKjCOO6QGJ9ihsMQCLcBGAsYHQ/s70/2.jpg' />
+                                    <div class='author ms-3'>
+                                        <h3 class='fs-6 mb-1'>
+                                            Raj Himachal
+                                        </h3>
+                                        <p class='text-muted m-0'>
+                                            Seo Manager
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class='text-muted mt-3'>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quaerat, eos recusandae fugiat nesciunt sint accusantium repellendus officia perferendis ea.
+                                </p>
+                                <div class='rating text-danger'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                </div>
+                            </div>
+                            <div class='widget Image testi-item carousel-item bg-white shadow-sm rounded p-4 mb-5' data-version='2' id='Image4'>
+                                <div class='testi-author-info d-flex align-items-center'>
+                                    <img alt='Raj Himachal' class='img-thumbnail rounded-circle' src='https://1.bp.blogspot.com/-naoJGWqVXuE/YSnDDDbK5LI/AAAAAAAAAco/pWfBvXUTrqMCrNBeKSKjCOO6QGJ9ihsMQCLcBGAsYHQ/s70/2.jpg' />
+                                    <div class='author ms-3'>
+                                        <h3 class='fs-6 mb-1'>
+                                            Raj Himachal
+                                        </h3>
+                                        <p class='text-muted m-0'>
+                                            Seo Manager
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class='text-muted mt-3'>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quaerat, eos recusandae fugiat nesciunt sint accusantium repellendus officia perferendis ea.
+                                </p>
+                                <div class='rating text-danger'>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                    <i class='fas fa-star'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials section end -->
+    <!-- subscribe section start -->
+    <section class='contact py-5' id='subscribe'>
+        <div class='container-lg py-4'>
+            <div class='row justify-content-center mb-5'>
+                <div class='col-lg-8'>
+                    <div class='section-title text-center' data-aos='fade-down'>
+                        <h2 class='fw-bold mb5'>Subscribe</h2>
+                    </div>
+                </div>
+            </div>
+            <div class='container-md' data-aos='flip-down'>
+                <form class='d-flex justify-content-center' name='subscribe'>
+                    <input class='form-control form-control-lg fs-6 border-0 shadow-sm bg-white text-dark' name='email' placeholder='email@example.com' required='' type='email' />
+                    <button class='btn btn-danger' name='submit' type='submit'>SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe section end -->
+    <!-- contact section start -->
+    <section class='contact py-5' id='contact'>
+        <div class='container-lg py-4'>
+            <div class='row justify-content-center mb-5'>
+                <div class='col-lg-8'>
+                    <div class='section-title text-center' data-aos='fade-down'>
+                        <h2 class='fw-bold mb5'>Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-4' data-aos='fade-right'>
+                    <div class='section' id='contact'>
+                        <div class='widget Text contact-item d-flex mb-3' data-version='2' id='Text4'>
+                            <div class='icons fs-4 text-danger'>
+                                <i class='fas fa-envelope'></i>
+                            </div>
+                            <a class='text ms-3 text-decoration-none' href='mailto:example@gmail.com' target='blank'>
+                                <h3 class='fs-5 text-dark'>
+                                    Email
+                                </h3>
+                                <p class='text-muted text-decoration-none'>
+                                    example@gmail.com
+                                </p>
+                            </a>
+                        </div>
+                        <div class='widget Text contact-item d-flex mb-3' data-version='2' id='Text5'>
+                            <div class='icons fs-4 text-danger'>
+                                <i class='fas fa-phone'></i>
+                            </div>
+                            <a class='text ms-3 text-decoration-none' href='tel:+92 9645 123 456'>
+                                <h3 class='fs-5 text-dark'>
+                                    Phone
+                                </h3>
+                                <p class='text-muted text-decoration-none'>
+                                    +92 9645 123 456
+                                </p>
+                            </a>
+                        </div>
+                        <div class='widget Text contact-item d-flex mb-3' data-version='2' id='Text6'>
+                            <div class='icons fs-4 text-danger'>
+                                <i class='fab fa-whatsapp'></i>
+                            </div>
+                            <a class='text ms-3 text-decoration-none' href='https://api.whatsapp.com/send?phone=+92 9645 123 456' target='_blank'>
+                                <h3 class='fs-5 text-dark'>
+                                    Whatsapp
+                                </h3>
+                                <p class='text-muted text-decoration-none'>
+                                    +92 9645 123 456
+                                </p>
+                            </a>
+                        </div>
+                        <div class='widget Text contact-item d-flex mb-3' data-version='2' id='Text8'>
+                            <div class='icons fs-4 text-danger'>
+                                <i class='fas fa-map-marker-alt'></i>
+                            </div>
+                            <a class='text ms-3 text-decoration-none' href='https://maps.google.com/maps?q=Lahore, Pakistan' target='blank'>
+                                <h3 class='fs-5 text-dark'>
+                                    Visit Office
+                                </h3>
+                                <p class='text-muted text-decoration-none'>
+                                    Lahore, Pakistan
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-8' data-aos='fade-left'>
+                    <div class='section' id='ContactForm'>
+                        <div class='widget ContactForm contact-form' data-version='2' id='ContactForm1'>
+                            <form name='contact-form'>
+                                <div class='row'>
+                                    <div class='col-lg-6 mb-4'>
+                                        <input class='form-control form-control-lg fs-6 border-0 shadow-sm bg-white text-dark' id='ContactForm1_contact-form-name' name='name' placeholder='Your Name' size='30' type='text' value='' />
+                                    </div>
+                                    <div class='col-lg-6 mb-4'>
+                                        <input class='form-control form-control-lg fs-6 border-0 shadow-sm bg-white text-dark' id='ContactForm1_contact-form-email' name='email' placeholder='Your Email' size='30' type='email' value='' />
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-lg-12 mb-4'>
+                                        <textarea class='form-control form-control-lg fs-6 border-0 shadow-sm bg-white text-dark' cols='25' id='ContactForm1_contact-form-email-message' name='email-message' placeholder='Your Message' rows='5'></textarea>
+                                    </div>
+                                </div>
+                                <div class='row'>
+                                    <div class='col-lg-12'>
+                                        <button class='btn btn-danger px-3' id='ContactForm1_contact-form-submit' type='button' value='Send'>Send Message</button>
+                                    </div>
+                                </div>
+                                <div style='text-align: center; max-width: 222px; width: 100%'>
+                                    <p class='contact-form-error-message' id='ContactForm1_contact-form-error-message'></p>
+                                    <p class='contact-form-success-message' id='ContactForm1_contact-form-success-message'></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section end -->
+    <!-- footer section start -->
+    <footer class='footer border-top py-4'>
+        <div class='container-lg'>
+            <div class='row section' id='footer'>
+                <div class='widget Text col-lg-12' data-version='2' id='Text7'>
+                    <p class='m-0 text-center text-muted'>All rights reserved &#169; <span id='copyright-date'></span>
+                        <a class='text-muted' href='https://m.anaskamboh.com/'>
+M.AnasKamboh.com
+</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <button class='btn btn-danger' id='gototop' onclick='gototopFunction()' style='bottom: -60px;position: fixed;right: 10px;transition: bottom 500ms ease 0s;'>
+        <i class='fas fa-angle-double-up'></i>
+    </button>
+
+    <!-- bootstrap JavaScript -->
+
+    <script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
+    <script crossorigin='anonymous' integrity='sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj' src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js'></script>
+    <script>
+        window.addEventListener("load", function() {
+            /* ----------- start Animation on page-loader ---------------- */
+            document.querySelector(".page-loader").classList.add("fade-out")
+            setTimeout(function() {
+                document.querySelector(".page-loader").style.display = "none";
+            }, 600);
+            /* ----------- Animation on scroll ---------------- */
+            AOS.init();
+        });
+
+        /* ======================== go to top button =================== */
+
+        const mybutton = document.getElementById("gototop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                mybutton.style.bottom = "20px";
+            } else {
+                mybutton.style.bottom = "-60px";
+            }
+        };
+
+        /* ========= When the user clicks on the button, scroll to the top of the document ========= */
+
+        function gototopFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+
+
+        /* ========= copyright ======== */
+        var d = new Date();
+        document.getElementById("copyright-date").innerHTML = d.getFullYear();
+    </script>
+</body>
+
+</html>
